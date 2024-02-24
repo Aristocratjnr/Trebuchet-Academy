@@ -22,7 +22,7 @@ class TeacherExtra(models.Model):
 
 
 classes=[('one','one'),('two','two'),('three','three'),
-('four','four'),('five','five'),('six','six'),('seven','seven'),('eight','eight'),('nine','nine'),('ten','ten')]
+('four','four'),('five','five'),('six','six'),('form1','form1'),('form2','form2'),('form3','form3'),('Gap year','Gap year')]
 class StudentExtra(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     roll = models.CharField(max_length=10)

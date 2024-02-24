@@ -14,21 +14,21 @@ def home_view(request):
 
 
 
-#for showing signup/login button for teacher(by sumit)
+#for showing signup/login button for teacher(by aristocrat)
 def adminclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
     return render(request,'school/adminclick.html')
 
 
-#for showing signup/login button for teacher(by sumit)
+#for showing signup/login button for teacher(by aristocrat)
 def teacherclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
     return render(request,'school/teacherclick.html')
 
 
-#for showing signup/login button for student(by sumit)
+#for showing signup/login button for student(by aristocrat)
 def studentclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
@@ -105,7 +105,7 @@ def teacher_signup_view(request):
 
 
 
-#for checking user is techer , student or admin(by sumit)
+#for checking user is techer , student or admin(by aristocrat)
 def is_admin(user):
     return user.groups.filter(name='ADMIN').exists()
 def is_teacher(user):
@@ -586,7 +586,7 @@ def teacher_notice_view(request):
 
 
 
-#FOR STUDENT AFTER THEIR Loginnnnnnnnnnnnnnnnnnnnn(by sumit)
+#FOR STUDENT AFTER THEIR Loginnnnnnnnnnnnnnnnnnnnn(by aristocrat)
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def student_dashboard_view(request):
@@ -626,7 +626,7 @@ def student_attendance_view(request):
 
 
 
-# for aboutus and contact ussssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss (by aristocrat)
+# for aboutus and contact usssssssssssssssssssssssssssssssssssssssssssss (by aristocrat)
 def aboutus_view(request):
     return render(request,'school/aboutus.html')
 

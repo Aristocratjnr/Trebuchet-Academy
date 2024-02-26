@@ -114,3 +114,12 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+#docker
+__pycache__
+.dockerignore
+Dockerfile
+docker-compose.yml
+*.pyc
+*.pyo
+*.pyd

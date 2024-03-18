@@ -11,10 +11,14 @@ COPY . /app
 RUN pip install --upgrade pip
 
 # Install any needed packages specified in requirements.txt
-RUN python -m pip install -r requirements.txt 
+RUN pip install -r requirements.txt
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
 # Define the command to run on container start
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["bash", "-c", "\
+    py manage.py makemigrations && \
+    py manage.py migrate && \
+    py manage.py runserver 127.0.0.1:8000 \
+"]

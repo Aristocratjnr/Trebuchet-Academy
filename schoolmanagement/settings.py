@@ -27,7 +27,7 @@ SECRET_KEY = 'k0ujs9pcw+7qohwas!o7_ept20$c@$)-b=qco8sgviy_f)((bc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -144,3 +144,5 @@ EMAIL_HOST_PASSWORD = 'Aristocrat1!' # host email password required
 # otherwise you will get SMTPAuthenticationError at /contactus
 # this process is required because google blocks apps authentication by default
 EMAIL_RECEIVING_USER = ['ayimobuobi@gmail.com'] # email on which you will receive messages sent from website
+STATICFILES_DIRS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_ROOT = [os.path.join(BASE_DIR, 'static')]

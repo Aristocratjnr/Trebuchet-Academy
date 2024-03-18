@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
-
+# build_files.sh
 pip install -r requirements.txt
-
-py manage.py makemigrations
-py manage.py migrate
-py manage.py runserver
+python3.9 manage.py collectstatic --noinput

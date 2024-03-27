@@ -16,9 +16,5 @@ RUN pip install -r requirements.txt
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define the command to run on container start
-CMD ["bash", "-c", "\
-    py manage.py makemigrations && \
-    py manage.py migrate && \
-    py manage.py runserver 127.0.0.1:8000 \
-"]
+# Run migrations and start the Django development server
+CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000

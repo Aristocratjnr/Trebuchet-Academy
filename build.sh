@@ -1,9 +1,10 @@
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
+#!/bin/bash
 
+# Install dependencies
 pip install -r requirements.txt
 
-py manage.py makemigrations
-py manage.py migrate
-py manage.py runserver
+# Specify Python interpreter version explicitly if necessary
+python3.10 manage.py collectstatic --noinput
+
+# Run collectstatic command
+python manage.py collectstatic --noinput

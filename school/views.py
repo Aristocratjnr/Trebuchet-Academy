@@ -152,7 +152,7 @@ def admin_dashboard_view(request):
 
     notice=models.Notice.objects.all()
 
-    #aggregate function return dictionary so fetch data from dictionay(by sumit)
+    #aggregate function return dictionary so fetch data from dictionay
     mydict={
         'teachercount':teachercount,
         'pendingteachercount':pendingteachercount,
@@ -178,7 +178,7 @@ def admin_dashboard_view(request):
 
 
 
-#for teacher sectionnnnnnnn by adminnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn(by sumit)
+#for teacher sectionnnnnnnn by adminnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn(by aristocrat)
 
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)

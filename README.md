@@ -55,3 +55,4 @@ EMAIL_RECEIVING_USER = 'youremail@gmail.com'
 ```
 https://myaccount.google.com/lesssecureapps
 ```
+ Note : This is a demo project.

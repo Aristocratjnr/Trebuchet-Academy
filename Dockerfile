@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 RUN pip freeze > requirements.txt
 
 # Run migrations and start the Django development server
-CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 
+CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000 --noreload

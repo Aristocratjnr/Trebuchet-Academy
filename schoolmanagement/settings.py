@@ -141,5 +141,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'merisolbella@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'Aristocrat1!'  # Replace with your password
+EMAIL_HOST_PASSWORD = ''  # Replace with your password
 EMAIL_RECEIVING_USER = ['ayimobuobi@gmail.com']  # List of emails to receive messages sent from the website

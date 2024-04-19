@@ -501,7 +501,7 @@ def admin_notice_view(request):
 
 
 
-#for TEACHER  LOGIN    SECTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN(by sumit)
+#for TEACHER  LOGIN    SECTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN(by aristocrat)
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
 def teacher_dashboard_view(request):

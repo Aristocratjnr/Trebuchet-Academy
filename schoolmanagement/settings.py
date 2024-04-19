@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', '*']
 
+CSRF_TRUSTED_ORIGINS = ['https://trebuchet-academy-uh1t.onrender.com']
 
 # Application definition
 
@@ -131,7 +132,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
-CSRF_TRUSTED_ORIGINS = ['https://trebuchet-academy-uh1t.onrender.com ']
+CSRF_TRUSTED_ORIGINS = ['https://trebuchet-academy-uh1t.onrender.com']
 
 # Login Redirect URL
 LOGIN_REDIRECT_URL = '/afterlogin'

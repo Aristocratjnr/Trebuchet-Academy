@@ -56,6 +56,6 @@ class NoticeForm(forms.ModelForm):
 
 #for contact us page
 class ContactusForm(forms.Form):
-    Name = forms.CharField(max_length=30)
+    Name = forms.CharField(max_length=20)
     Email = forms.EmailField()
-    Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
+    Message = forms.CharField(max_length=200,widget=forms.Textarea(attrs={'rows': 3, 'cols': 20}))

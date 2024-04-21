@@ -140,8 +140,8 @@ LOGIN_REDIRECT_URL = '/afterlogin'
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_USE_SSL= True
+EMAIL_PORT = 465
 EMAIL_HOST_USER = 'merisolbella@gmail.com'  # Replace with your email
 EMAIL_HOST_PASSWORD = ''  # Replace with your password
 EMAIL_RECEIVING_USER = ['ayimobuobi@gmail.com']  # List of emails to receive messages sent from the website

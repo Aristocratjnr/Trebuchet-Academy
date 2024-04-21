@@ -480,7 +480,7 @@ def admin_view_fee_view(request,cl):
 
 
 
-#notice related viewsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss(by sumit)
+#notice related viewsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss(by aristocrat)
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
 def admin_notice_view(request):
@@ -501,7 +501,7 @@ def admin_notice_view(request):
 
 
 
-#for TEACHER  LOGIN    SECTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN(by sumit)
+#for TEACHER  LOGIN    SECTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN(by aristocrat)
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
 def teacher_dashboard_view(request):

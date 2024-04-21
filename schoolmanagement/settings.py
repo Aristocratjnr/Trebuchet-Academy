@@ -25,10 +25,11 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'k0ujs9pcw+7qohwas!o7_ept20$c@$)-b=qco8sgviy_f)((bc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', '*']
 
+CSRF_TRUSTED_ORIGINS = ['https://trebuchet-academy-uh1t.onrender.com']
 
 # Application definition
 
@@ -123,13 +124,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
 
+
+CSRF_TRUSTED_ORIGINS = ['https://trebuchet-academy-uh1t.onrender.com']
 
 # Login Redirect URL
 LOGIN_REDIRECT_URL = '/afterlogin'
@@ -140,5 +143,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'merisolbella@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'Aristocrat1!'  # Replace with your password
+EMAIL_HOST_PASSWORD = ''  # Replace with your password
 EMAIL_RECEIVING_USER = ['ayimobuobi@gmail.com']  # List of emails to receive messages sent from the website

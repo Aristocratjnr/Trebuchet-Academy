@@ -4,17 +4,17 @@ FROM python:3.10
 # Set the working directory in the container
 WORKDIR /schoolmanagement/
 
-# Create a virtual environment
-RUN python -m venv venv
-
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container at /schoolmanagement/
 COPY . /schoolmanagement/
 
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+# Create a virtual environment and install dependencies
+RUN python -m venv venv && \
+    /bin/bash -c "source venv/bin/activate && \
+    pip install --upgrade pip && \
+    pip install -r requirements.txt"
 
-#Update dependencies
-RUN pip freeze > requirements.txt
-
-# Run migrations and start the Django development server
-CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000 --noreload
+# Run migrations and start the Django development server within the virtual environment
+CMD /bin/bash -c "source venv/bin/activate && \
+    python manage.py makemigrations && \
+    python manage.py migrate && \
+    python manage.py runserver 0.0.0.0:8000 --noreload"

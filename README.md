@@ -55,4 +55,4 @@ EMAIL_RECEIVING_USER = 'youremail@gmail.com'
 ```
 https://myaccount.google.com/lesssecureapps
 ```
- Note : This is a demo project.
+ Note : This is a demo project on DCIT317(I.T PROJECT MANAGEMENT).

@@ -1,33 +1,93 @@
 {% extends 'school/adminbase.html' %}
 
-
-
 {% block content %}
 
 <head>
+  <!-- Updated Bootstrap 4.5.2 CSS for modern styling -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-  <style media="screen">
-    a:link {
-      text-decoration: none;
+  <style>
+    body {
+      padding-top: 2rem;
     }
 
-    h6 {
+    .panel {
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .panel-heading {
+      background-color: #007bff;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem 0.5rem 0 0;
       text-align: center;
     }
 
-    .row {
-      margin: 100px;
+    .panel-title {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .table {
+      border-radius: 0.5rem;
+      overflow: hidden;
+      margin-top: 2rem;
+      background: #fff;
+    }
+
+    .table thead th {
+      background-color: #f1f1f1;
+      color: #333;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .table tbody tr {
+      transition: background-color 0.3s ease;
+    }
+
+    .table tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+      background-color: #e2e6ea;
+    }
+
+    .btn-submit {
+      display: block;
+      margin: 20px auto;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.25rem;
+      background-color: #ffec00;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #f7d900;
+      cursor: pointer;
+    }
+
+    .form-control {
+      border-radius: 0.25rem;
+      font-size: 0.875rem; /* Smaller placeholder font size */
     }
   </style>
-
 </head>
+
 <div class="container">
   <div class="row">
-    <div class="panel panel-primary">
+    <div class="panel panel-primary col-md-12">
       <div class="panel-heading">
         <h6 class="panel-title">Attendance of class {{cl}} and date {{date}}</h6>
       </div>
@@ -39,20 +99,18 @@
             <th>Present/Absent</th>
           </tr>
         </thead>
-        {%for attendancedata,studentdata in mylist %}
-        <tr>
-          <td>{{studentdata.get_name}}</td>
-          <td>{{studentdata.roll}}</td>
-          <td>{{attendancedata.present_status}}</td>
-        </tr>
-        {%endfor%}
+        <tbody>
+          {% for attendancedata, studentdata in mylist %}
+          <tr>
+            <td>{{ studentdata.get_name }}</td>
+            <td>{{ studentdata.roll }}</td>
+            <td>{{ attendancedata.present_status }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
       </table>
     </div>
   </div>
 </div>
 
 {% endblock content %}
-<!--
-written By : aristocratjnr
-facebook : obuobidavidayim
--->

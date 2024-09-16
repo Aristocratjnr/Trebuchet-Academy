@@ -1,84 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /*---------------------------------------
-   Social section
------------------------------------------*/
+    Footer section
+    -----------------------------------------*/
     footer {
-      padding: 0px 0px 0px 0px;
-      background-color: black;
-      margin: 0px;
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
 
-    .fa {
-      padding: 20px;
-      font-size: 23px;
-      width: 60px;
+    .social-icons {
+      margin-bottom: 1rem;
+    }
+
+    .social-icons a {
+      color: white;
+      padding: 10px;
+      font-size: 24px;
+      width: 50px;
       text-align: center;
       text-decoration: none;
-      margin: 5px 2px;
+      margin: 5px;
       border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s, opacity 0.3s;
     }
 
-    .fa:hover {
-      opacity: 0.5;
-      text-decoration: none;
+    .social-icons a:hover {
+      opacity: 0.7;
     }
 
     .fa-facebook {
-      background: #3B5998;
-      color: white;
-      margin-top: 30px;
+      background: #3b5998;
     }
 
     .fa-whatsapp {
       background: #25d366;
-      color: white;
     }
 
     .fa-twitter {
-      background: #55ACEE;
-      color: white;
+      background: #55acee;
     }
 
     .fa-instagram {
-      background: #125688;
-      color: white;
+      background: #e1306c;
     }
 
-    p {
-      text-align: center;
+    .footer-content {
+      margin-top: 1rem;
+      font-family: Arial, sans-serif;
+    }
 
+    .footer-content p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-content p a {
+      color: #f1f1f1;
+      text-decoration: none;
+    }
+
+    .footer-content p a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
-<footer>
-
-  <p>
-    <a href="https://web.facebook.com/david.ayim.56/" class="fa fa-facebook"></a>
-    <a href="https://api.whatsapp.com/send?phone=233551784926&text=Hello%20Aristocrat.%0d%0aHow%20are%20you%20%3f%0d%0aI%20am%20impressed%20with%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
-    <a href="https://www.instagram.com/david.ayim.56/" class="fa fa-instagram"></a>
-  </p>
-
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-          <p>Trebuchet Academy<br>
-            Copyright &copy; 2024 Aristocrat Junior </p>
-        </div>
-      </div>
+<body>
+  <footer>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/david.ayim.56/" class="fab fa-facebook" aria-label="Facebook"></a>
+      <a href="https://api.whatsapp.com/send?phone=233551784926&text=Hello%20Aristocrat.%0d%0aHow%20are%20you%20%3f%0d%0aI%20am%20impressed%20with%20your%20website.&source=&data=#" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+      <a href="https://www.instagram.com/david.ayim.56/" class="fab fa-instagram" aria-label="Instagram"></a>
     </div>
-  </div>
-</footer>
+
+    <div class="footer-content">
+      <p>Trebuchet Academy<br>
+        Copyright &copy; 2024 Aristocrat Junior</p>
+    </div>
+  </footer>
+</body>
 
 </html>
